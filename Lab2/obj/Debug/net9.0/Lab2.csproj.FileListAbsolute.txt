@@ -1,0 +1,14 @@
+/Users/karinalitvinko/RiderProjects/Lab2/Lab2/bin/Debug/net9.0/Lab2
+/Users/karinalitvinko/RiderProjects/Lab2/Lab2/bin/Debug/net9.0/Lab2.deps.json
+/Users/karinalitvinko/RiderProjects/Lab2/Lab2/bin/Debug/net9.0/Lab2.runtimeconfig.json
+/Users/karinalitvinko/RiderProjects/Lab2/Lab2/bin/Debug/net9.0/Lab2.dll
+/Users/karinalitvinko/RiderProjects/Lab2/Lab2/bin/Debug/net9.0/Lab2.pdb
+/Users/karinalitvinko/RiderProjects/Lab2/Lab2/obj/Debug/net9.0/Lab2.GeneratedMSBuildEditorConfig.editorconfig
+/Users/karinalitvinko/RiderProjects/Lab2/Lab2/obj/Debug/net9.0/Lab2.AssemblyInfoInputs.cache
+/Users/karinalitvinko/RiderProjects/Lab2/Lab2/obj/Debug/net9.0/Lab2.AssemblyInfo.cs
+/Users/karinalitvinko/RiderProjects/Lab2/Lab2/obj/Debug/net9.0/Lab2.csproj.CoreCompileInputs.cache
+/Users/karinalitvinko/RiderProjects/Lab2/Lab2/obj/Debug/net9.0/Lab2.dll
+/Users/karinalitvinko/RiderProjects/Lab2/Lab2/obj/Debug/net9.0/refint/Lab2.dll
+/Users/karinalitvinko/RiderProjects/Lab2/Lab2/obj/Debug/net9.0/Lab2.pdb
+/Users/karinalitvinko/RiderProjects/Lab2/Lab2/obj/Debug/net9.0/Lab2.genruntimeconfig.cache
+/Users/karinalitvinko/RiderProjects/Lab2/Lab2/obj/Debug/net9.0/ref/Lab2.dll
