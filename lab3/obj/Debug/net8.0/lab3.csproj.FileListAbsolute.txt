@@ -1,0 +1,14 @@
+D:\Visual Studio\Source\Repos\lab3\bin\Debug\net8.0\lab3.exe
+D:\Visual Studio\Source\Repos\lab3\bin\Debug\net8.0\lab3.deps.json
+D:\Visual Studio\Source\Repos\lab3\bin\Debug\net8.0\lab3.runtimeconfig.json
+D:\Visual Studio\Source\Repos\lab3\bin\Debug\net8.0\lab3.dll
+D:\Visual Studio\Source\Repos\lab3\bin\Debug\net8.0\lab3.pdb
+D:\Visual Studio\Source\Repos\lab3\obj\Debug\net8.0\lab3.GeneratedMSBuildEditorConfig.editorconfig
+D:\Visual Studio\Source\Repos\lab3\obj\Debug\net8.0\lab3.AssemblyInfoInputs.cache
+D:\Visual Studio\Source\Repos\lab3\obj\Debug\net8.0\lab3.AssemblyInfo.cs
+D:\Visual Studio\Source\Repos\lab3\obj\Debug\net8.0\lab3.csproj.CoreCompileInputs.cache
+D:\Visual Studio\Source\Repos\lab3\obj\Debug\net8.0\lab3.dll
+D:\Visual Studio\Source\Repos\lab3\obj\Debug\net8.0\refint\lab3.dll
+D:\Visual Studio\Source\Repos\lab3\obj\Debug\net8.0\lab3.pdb
+D:\Visual Studio\Source\Repos\lab3\obj\Debug\net8.0\lab3.genruntimeconfig.cache
+D:\Visual Studio\Source\Repos\lab3\obj\Debug\net8.0\ref\lab3.dll
