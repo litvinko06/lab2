@@ -10,7 +10,7 @@ public class Repository<T> :IRepository<T>
   {
     if (value1.Equals(value2) != true)
     {
-        Console.WriteLine($"Commited changes: {value1} => {value2}");
+        Console.WriteLine($"Commit changes: {value1} => {value2}");
     }
     else
     {
