@@ -6,7 +6,9 @@ class Program_Main
 {
     static void Main()
     {
-
+    Repository<string> myCode = new Repository<string>();
+    myCode.Commit("test");
+    myCode.Commit("test", "test: the sequel");
     }
 }
 
