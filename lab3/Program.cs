@@ -50,5 +50,13 @@ class Geeks
 
         Console.WriteLine(intEqual);
         Console.WriteLine(strEqual);
+
+        List<int> numbers = new List<int> { 1, 2, 3, 4, 5 };
+        List<int> evenNumbers = numbers.FindAll(x => x % 2 == 0);
+
+        foreach (var item in evenNumbers)
+        {
+            Console.WriteLine(item);
+        }
     }
 }*/
