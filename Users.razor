@@ -1,0 +1,78 @@
+// Blazor UI (Users.razor)
+@page "/users"
+@using BlazorLab
+
+<h3>Користувачі</h3>
+
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Ім'я</th>
+        <th>Email</th>
+        <th>Дії</th>
+    </tr>
+    @foreach (var user in users)
+    {
+        <tr>
+            <td>@user.Id</td>
+            <td>@user.Name</td>
+            <td>@user.Email</td>
+            <td>
+                <button @onclick="() => EditUser(user)">Редагувати</button>
+                <button @onclick="() => DeleteUser(user.Id)">Видалити</button>
+            </td>
+        </tr>
+    }
+</table>
+
+<h4>Додати/Редагувати користувача</h4>
+<input type="text" placeholder="Ім'я" @bind="newUser.Name" />
+<input type="email" placeholder="Email" @bind="newUser.Email" />
+<button @onclick="SaveUser">Зберегти</button>
+
+@code {
+    private UserRepository repo = new UserRepository();
+    private List<User> users;
+    private User newUser = new User();
+
+    // Обробник події зміни користувача
+    private void OnUserChanged(object sender, UserEventArgs e)
+    {
+        // Логіка сповіщення користувача
+        Console.WriteLine($"Користувач {e.Action}: {e.User.Name} ({e.User.Email})");
+        users = repo.GetAll();
+    }
+
+    protected override void OnInitialized()
+    {
+        // Підписка на подію
+        repo.UserChanged += OnUserChanged;
+        users = repo.GetAll();
+    }
+
+    private void SaveUser()
+    {
+        if (newUser.Id == 0)
+            repo.Add(newUser);
+        else
+            repo.Update(newUser);
+        newUser = new User();
+    }
+
+    private void EditUser(User user)
+    {
+        newUser = new User { Id = user.Id, Name = user.Name, Email = user.Email };
+    }
+
+    private void DeleteUser(int id)
+    {
+        repo.Delete(id);
+    }
+
+    public void Dispose()
+    {
+        // Відписка від події при закритті сторінки
+        repo.UserChanged -= OnUserChanged;
+    }
+
+}
