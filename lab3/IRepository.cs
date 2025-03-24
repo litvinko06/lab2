@@ -1,7 +1,13 @@
 ﻿// Базовий інтерфейс з методами CRUD
-interface IRepository<T>
+public interface IRepository<T>
 {
-    void Commit(T value1);
+    void GetById(int id);
 
-    void Commit(T value1, T value2);
+    IEnumerable<T> GetAll();
+
+    void Add(T entity);
+
+    void Update(T entity);
+
+    void Delete(T entity);
 }
