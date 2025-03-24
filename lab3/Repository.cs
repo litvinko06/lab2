@@ -3,26 +3,29 @@ public class Repository<T> :IRepository<T>
 {
     List<T> commitList = [];
 
-    public void Commit(T value1)
+    public void GetById(int id)
     {
-        commitList.Add(value1);
-
-        Console.WriteLine($"Initial commit - {value1}");
+        Console.WriteLine(commitList[id]);
     }
 
-    public void Commit(T value1, T value2)
+    public IEnumerable<T> GetAll()
     {
-        if (value1.Equals(value2) != true)
-        {
-            commitList.Remove(value1);
-            commitList.Add(value2);
+        return commitList.ToList();
+    }
 
-            Console.WriteLine($"Commit changes: {value1} => {value2}");
-        }
-        else
-        {
-            Console.WriteLine("No commit changes");
-        }
+    public void Add(T entity)
+    {
+        commitList.Add(entity);
+    }
+
+    public void Update(T entity)
+    {
+
+    }
+
+    public void Delete(T entity)
+    {
+        commitList.Remove(entity);
     }
 
     public List<T> GetCommit()
