@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "k5TBEdYbpqE=",
+  "success": true,
+  "projectFilePath": "D:\\Visual Studio\\Source\\Repos\\lab6\\lab6.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Alexey\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
