@@ -49,10 +49,4 @@ public class GenericRepository : JsonStorage, IDataStorage<User>
     {
         SaveChanged?.Invoke(this, new SaveEventArgs { User = user, Action = action });
     }
-
-    // Метод для виклику події
-    /*protected virtual void OnUserChanged(User user, string action)
-    {
-        UserChanged?.Invoke(this, new UserEventArgs { User = user, Action = action });
-    }*/
 }
