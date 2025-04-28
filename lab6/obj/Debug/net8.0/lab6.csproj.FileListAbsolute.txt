@@ -1,0 +1,17 @@
+D:\Visual Studio\Source\Repos\lab6\bin\Debug\net8.0\lab6.exe
+D:\Visual Studio\Source\Repos\lab6\bin\Debug\net8.0\lab6.deps.json
+D:\Visual Studio\Source\Repos\lab6\bin\Debug\net8.0\lab6.runtimeconfig.json
+D:\Visual Studio\Source\Repos\lab6\bin\Debug\net8.0\lab6.dll
+D:\Visual Studio\Source\Repos\lab6\bin\Debug\net8.0\lab6.pdb
+D:\Visual Studio\Source\Repos\lab6\obj\Debug\net8.0\lab6.GeneratedMSBuildEditorConfig.editorconfig
+D:\Visual Studio\Source\Repos\lab6\obj\Debug\net8.0\lab6.AssemblyInfoInputs.cache
+D:\Visual Studio\Source\Repos\lab6\obj\Debug\net8.0\lab6.AssemblyInfo.cs
+D:\Visual Studio\Source\Repos\lab6\obj\Debug\net8.0\lab6.csproj.CoreCompileInputs.cache
+D:\Visual Studio\Source\Repos\lab6\obj\Debug\net8.0\lab6.dll
+D:\Visual Studio\Source\Repos\lab6\obj\Debug\net8.0\refint\lab6.dll
+D:\Visual Studio\Source\Repos\lab6\obj\Debug\net8.0\lab6.pdb
+D:\Visual Studio\Source\Repos\lab6\obj\Debug\net8.0\lab6.genruntimeconfig.cache
+D:\Visual Studio\Source\Repos\lab6\obj\Debug\net8.0\ref\lab6.dll
+D:\Visual Studio\Source\Repos\lab6\bin\Debug\net8.0\BCrypt.Net-Next.dll
+D:\Visual Studio\Source\Repos\lab6\obj\Debug\net8.0\lab6.csproj.AssemblyReference.cache
+D:\Visual Studio\Source\Repos\lab6\obj\Debug\net8.0\lab6.csproj.Up2Date
