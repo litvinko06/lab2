@@ -1,0 +1,22 @@
+[
+  {
+    "Id": 1,
+    "Name": "PCs",
+    "Amount": 5
+  },
+  {
+    "Id": 2,
+    "Name": "Headphones",
+    "Amount": 10
+  },
+  {
+    "Id": 3,
+    "Name": "Smartphones",
+    "Amount": 10
+  },
+  {
+    "Id": 4,
+    "Name": "Gamepads",
+    "Amount": 10
+  }
+]
