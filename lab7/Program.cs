@@ -1,63 +1,89 @@
-﻿//using BCrypt.Net;
-using System.Diagnostics.Metrics;
-using System.Text.Json;
-using System.Xml.Linq;
-
-namespace Storage
+﻿
+public class Program
 {
-    public class Program
+    static GenericStorage storage = new GenericStorage();
+    static JsonDataStorage jsonStorage = new JsonDataStorage();
+
+    public static void Main(string[] args)
     {
-        public static void Main(string[] args)
+        storage.SaveChanged += (sender, eventArgs) =>
         {
-            JsonDataStorage jsonStorage = new JsonDataStorage();
-            GenericStorage newGenericStorage = new GenericStorage();
-            var entireStorage = newGenericStorage.GetAll();
+            Console.WriteLine($"Item '{eventArgs.Item.Name}' {eventArgs.Action}. New amount: {eventArgs.Item.Amount}");
+        };
 
-            //newGenericStorage.Add(new Item() { Id = 3, Name = "Sofiya", Amount = 0 });
-            //newGenericStorage.Add(new Item() { Id = 4, Name = "Illya", Amount = 0 });
-
-            int choice = 1;
-            int amount = 5;
-            var itemById = newGenericStorage.GetById(choice);
-            //itemById = new Item() { Id = itemById.Id, Name = itemById.Name, Amount = itemById.Amount - amount };
-            //Console.WriteLine(itemById.Amount);
-
-            //newGenericStorage.Update(itemById);
-
-            //if
-            switch (choice)
+        while (true)
+        {
+            Console.Clear();
+            Console.WriteLine("=== СКЛАД ===");
+            foreach (var item in storage.GetAll())
             {
-                case 1:
-                    itemById = new Item() { Id = itemById.Id, Name = itemById.Name, Amount = itemById.Amount - amount };
-                    newGenericStorage.Update(itemById);
-                    Console.WriteLine($"Measured value is {choice}; too low.");
-                    break;
+                Console.WriteLine($"{item.Id}. {item.Name} — {item.Amount} од.");
+            }
 
-                case 2:
-                    itemById = new Item() { Id = itemById.Id, Name = itemById.Name, Amount = itemById.Amount - amount };
-                    newGenericStorage.Update(itemById);
-                    Console.WriteLine($"Measured value is {choice}; too high.");
-                    break;
+            Console.WriteLine("\nОберіть дію:");
+            Console.WriteLine("1. Замовити товар");
+            Console.WriteLine("2. Додати новий товар");
+            Console.WriteLine("3. Вийти");
 
-                case 3:
-                    itemById = new Item() { Id = itemById.Id, Name = itemById.Name, Amount = itemById.Amount - amount };
-                    newGenericStorage.Update(itemById);
-                    Console.WriteLine("Failed measurement.");
-                    break;
+            Console.Write("Ваш вибір: ");
+            var input = Console.ReadLine();
 
-                case 4:
-                    itemById = new Item() { Id = itemById.Id, Name = itemById.Name, Amount = itemById.Amount - amount };
-                    newGenericStorage.Update(itemById);
-                    Console.WriteLine("Failed measurement.");
+            switch (input)
+            {
+                case "1":
+                    ProcessOrder();
                     break;
-
+                case "2":
+                    AddNewItem();
+                    break;
+                case "3":
+                    return;
                 default:
-                    Console.WriteLine($"Measured value is {choice}.");
+                    Console.WriteLine("Невірний вибір.");
                     break;
             }
 
-            jsonStorage.Serialize(entireStorage);
-            jsonStorage.Deserialize();
+            Console.WriteLine("\nНатисніть будь-яку клавішу для продовження...");
+            Console.ReadKey();
         }
+    }
+
+    static void ProcessOrder()
+    {
+        Console.Write("Введіть ID товару: ");
+        if (!int.TryParse(Console.ReadLine(), out int id)) return;
+
+        var item = storage.GetById(id);
+        if (item == null)
+        {
+            Console.WriteLine("Товар не знайдено.");
+            return;
+        }
+
+        Console.Write($"Скільки одиниць {item.Name} ви хочете замовити? ");
+        if (!int.TryParse(Console.ReadLine(), out int amount)) return;
+
+        if (item.Amount < amount)
+        {
+            Console.WriteLine("Недостатньо товару на складі!");
+            return;
+        }
+
+        item.Amount -= amount;
+        storage.Update(item);
+        jsonStorage.Serialize(storage.GetAll());
+        Console.WriteLine("Замовлення оформлено.");
+    }
+
+    static void AddNewItem()
+    {
+        Console.Write("Назва нового товару: ");
+        string name = Console.ReadLine();
+
+        Console.Write("Кількість: ");
+        if (!int.TryParse(Console.ReadLine(), out int amount)) return;
+
+        storage.Add(new Item { Name = name, Amount = amount });
+        jsonStorage.Serialize(storage.GetAll());
     }
 }
