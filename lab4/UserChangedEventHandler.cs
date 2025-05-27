@@ -1,0 +1,1 @@
+﻿public delegate void UserChangedEventHandler(object sender, UserEventArgs e);
